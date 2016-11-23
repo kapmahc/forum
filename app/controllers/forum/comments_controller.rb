@@ -1,4 +1,4 @@
-require_dependency "forum/application_controller"
+require_dependency 'forum/application_controller'
 
 module Forum
   class CommentsController < ApplicationController

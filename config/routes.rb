@@ -1,11 +1,19 @@
 Forum::Engine.routes.draw do
-  get 'comments/index'
+  scope '/:locale' do
+    resources :articles do
+      collection do
+        get 'hot'
+        get 'latest'
+      end
+    end
+    resources :tags
+    resources :comments do
+      collection do
+        get 'hot'
+        get 'latest'
+      end
+    end
+  end
 
-  get 'tags/index'
-
-  get 'articles/index'
-
-  get 'dashboard' => 'home#dashboard'
-
-  root 'home#index'
+  root 'articles#latest'
 end
