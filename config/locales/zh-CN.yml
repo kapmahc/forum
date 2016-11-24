@@ -4,6 +4,7 @@ zh-CN:
       forum/article:
         title: 标题
         body: 正文
+        summary: 摘要
         tags: 标签
       forum/tag:
         name: 名称
@@ -24,6 +25,8 @@ zh-CN:
         title: 发表文章
       edit:
         title: 编辑文章 [%{id}]
+      show:
+        comments: 评论列表
     tags:
       hot:
         title: 标签列表
@@ -44,4 +47,6 @@ zh-CN:
         title: 添加评论
       edit:
         title: 编辑评论 [%{id}]
+    dashboard:
+      title: 论坛管理
 

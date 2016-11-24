@@ -11,7 +11,7 @@ module Forum
       links << {label: 'forum.tags.index.title', href: 'tags_path'}
     end
     {
-        label: 'forum.home.title',
+        label: 'forum.dashboard.title',
         links: links
     }
   end

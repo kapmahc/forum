@@ -1,0 +1,8 @@
+h2
+  = @title = t '.title'
+hr
+= simple_form_for @article do |f|
+  = f.input :title
+  = f.input :summary, as: :text
+  = f.input :body, as: :text
+  = f.button :submit, t('buttons.submit')

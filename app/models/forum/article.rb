@@ -1,6 +1,6 @@
 module Forum
   class Article < ApplicationRecord
-    validates :title, :body, presence: true
+    validates :title, :summary, :body, presence: true
 
     belongs_to :user
     has_many :comments, class_name: 'Forum::Comment', foreign_key: 'forum_article_id'

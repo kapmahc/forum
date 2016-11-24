@@ -6,7 +6,13 @@ Forum::Engine.routes.draw do
         get 'latest'
       end
     end
-    resources :tags
+
+    resources :tags do
+      collection do
+        get 'hot'
+      end
+    end
+
     resources :comments do
       collection do
         get 'hot'
