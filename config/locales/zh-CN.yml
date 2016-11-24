@@ -36,6 +36,8 @@ zh-CN:
         title: 添加标签
       edit:
         title: 编辑标签 [%{id}]
+      show:
+        title: 标签 [%{name}]
     comments:
       hot:
         title: 热门评论
@@ -48,5 +50,5 @@ zh-CN:
       edit:
         title: 编辑评论 [%{id}]
     dashboard:
-      title: 论坛管理
+      title: 论坛模块
 

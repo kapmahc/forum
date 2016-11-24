@@ -4,7 +4,13 @@ hr
 div class="row"
   blockquote class="blockquote"
     p class="mb-0" #{@article.summary}
-    footer class="blockquote-footer" #{time_ago_in_words @article.updated_at}
+    footer class="blockquote-footer"
+      = time_ago_in_words @article.updated_at
+      cite
+        - @article.tags.each do |i|
+          | &nbsp;
+          = link_to i.name, tag_path(i)
+
 
 div class="row block" #{@article.body}
 h3

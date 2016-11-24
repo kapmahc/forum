@@ -17,6 +17,11 @@ module Forum
       authorize @tag
     end
 
+    def show
+      @tag = Tag.find params[:id]
+      @articles = @tag.articles.order(vote: :desc).page params[:page]
+    end
+
     def create
       @tag = Tag.new tag_params
       authorize @tag

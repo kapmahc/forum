@@ -1,0 +1,5 @@
+h2
+  =@title = t '.title', name:@tag.name
+hr
+= paginate @articles, theme: 'twitter-bootstrap-4'
+= render 'forum/shared/articles', items:@articles
