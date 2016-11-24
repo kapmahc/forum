@@ -1,0 +1,7 @@
+h2
+  = @title = t '.title'
+  = link_to t('buttons.new'), new_tag_path, class: 'btn btn-link'
+hr
+div class="list-group"
+  - @tags.each do |i|
+    = link_to i.name, edit_tag_path(i), class: 'list-group-item list-group-item-action'

@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 20161123222715) do
   end
 
   create_table "forum_articles_tags", id: false, force: :cascade do |t|
-    t.integer "forum_article_id"
-    t.integer "forum_tag_id"
-    t.index ["forum_article_id", "forum_tag_id"], name: "index_forum_articles_tags_on_forum_article_id_and_forum_tag_id", unique: true
-    t.index ["forum_article_id"], name: "index_forum_articles_tags_on_forum_article_id"
-    t.index ["forum_tag_id"], name: "index_forum_articles_tags_on_forum_tag_id"
+    t.integer "article_id"
+    t.integer "tag_id"
+    t.index ["article_id", "tag_id"], name: "index_forum_articles_tags_on_article_id_and_tag_id", unique: true
+    t.index ["article_id"], name: "index_forum_articles_tags_on_article_id"
+    t.index ["tag_id"], name: "index_forum_articles_tags_on_tag_id"
   end
 
   create_table "forum_comments", force: :cascade do |t|

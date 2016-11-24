@@ -1,0 +1,47 @@
+zh-CN:
+  activerecord:
+    attributes:
+      forum/article:
+        title: 标题
+        body: 正文
+        tags: 标签
+      forum/tag:
+        name: 名称
+      forum/comment:
+        body: 正文
+  forum:
+    home:
+      title: 交流论坛
+      description: 论坛模块
+    articles:
+      hot:
+        title: 热门文章
+      latest:
+        title: 最新文章
+      index:
+        title: 我的文章
+      new:
+        title: 发表文章
+      edit:
+        title: 编辑文章 [%{id}]
+    tags:
+      hot:
+        title: 标签列表
+      index:
+        title: 标签管理
+      new:
+        title: 添加标签
+      edit:
+        title: 编辑标签 [%{id}]
+    comments:
+      hot:
+        title: 热门评论
+      latest:
+        title: 最新评论
+      index:
+        title: 我的评论
+      new:
+        title: 添加评论
+      edit:
+        title: 编辑评论 [%{id}]
+

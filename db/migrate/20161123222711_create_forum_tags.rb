@@ -12,6 +12,6 @@ class CreateForumTags < ActiveRecord::Migration[5.0]
       t.belongs_to :forum_tag, foreign_key: true
     end
     add_index :forum_articles_tags, [:forum_article_id, :forum_tag_id], unique:true
-    
+
   end
 end
