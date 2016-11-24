@@ -13,7 +13,7 @@ Forum::Engine.routes.draw do
       end
     end
 
-    resources :comments do
+    resources :comments, except: :show do
       collection do
         get 'hot'
         get 'latest'

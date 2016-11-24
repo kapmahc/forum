@@ -1,0 +1,5 @@
+-items.each do |i|
+  div class="row"
+    blockquote class="blockquote"
+      p class="mb-0" #{i.body}
+      footer class="blockquote-footer" #{time_ago_in_words i.updated_at}

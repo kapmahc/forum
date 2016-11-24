@@ -1,0 +1,5 @@
+h2 #{@title}
+hr
+= paginate @comments, theme: 'twitter-bootstrap-4'
+
+= render 'forum/shared/comments', items:@comments

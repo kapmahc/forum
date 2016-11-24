@@ -1,5 +1,6 @@
 h2 #{@title}
 hr
+= paginate @articles, theme: 'twitter-bootstrap-4'
 div class="row"
   -@articles.each do |i|
     div class="col-md-4"

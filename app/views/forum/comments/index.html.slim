@@ -1,0 +1,7 @@
+h2
+  = @title = t '.title'
+hr
+= paginate @comments, theme: 'twitter-bootstrap-4'
+div class="list-group"
+  - @comments.each do |i|
+    = link_to i.body, edit_comment_path(i), class: 'list-group-item list-group-item-action'

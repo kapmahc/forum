@@ -2,6 +2,7 @@ h2
   = @title = t '.title'
   = link_to t('buttons.new'), new_article_path, class: 'btn btn-link'
 hr
+= paginate @articles, theme: 'twitter-bootstrap-4'
 div class="list-group"
   - @articles.each do |i|
     = link_to i.title, edit_article_path(i), class: 'list-group-item list-group-item-action'

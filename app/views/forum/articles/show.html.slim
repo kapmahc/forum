@@ -10,10 +10,6 @@ div class="row block" #{@article.body}
 h3
   = t '.comments'
   - if policy(Forum::Comment.new).update?
-    = link_to t('buttons.new'), new_comment_path(article_id:@article.id), class:'btn btn-link'
+    = link_to t('buttons.new'), new_comment_path(article_id:@article.id), class:'btn btn-link', target: :_blank
 hr
--@article.comments.each do |i|
-  div class="row"
-    blockquote class="blockquote"
-      p class="mb-0" #{i.body}
-      footer class="blockquote-footer" #{time_ago_in_words i.updated_at}
+= render 'forum/shared/comments', items:@article.comments

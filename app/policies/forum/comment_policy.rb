@@ -1,5 +1,9 @@
 module Forum
   class CommentPolicy < ApplicationPolicy
+    def index?
+      !user.nil?
+    end
+
     def create?
       !user.nil?
     end
