@@ -8,6 +8,7 @@ module Forum
         {label: 'forum.comments.index.title', href: 'comments_path'},
     ]
     if user.is_admin?
+      links << nil
       links << {label: 'forum.tags.index.title', href: 'tags_path'}
     end
     {
