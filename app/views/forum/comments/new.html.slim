@@ -3,5 +3,5 @@ h2
 hr
 = simple_form_for @comment do |f|
   = f.input :forum_article_id, as: :hidden
-  = f.input :body, as: :text
+  = f.input :body, as: :text, input_html: {rows: 10}, hint: t('hints.can_markdown')
   = f.button :submit, t('buttons.submit')

@@ -12,7 +12,7 @@ div class="row"
           = link_to i.name, tag_path(i)
 
 
-div class="row block" #{@article.body}
+div class="row block markdown" #{@article.body}
 h3
   = t '.comments'
   - if policy(Forum::Comment.new).update?

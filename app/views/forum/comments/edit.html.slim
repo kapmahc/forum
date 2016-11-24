@@ -2,7 +2,7 @@ h2
   = @title = t '.title', id: @comment.id
 hr
 = simple_form_for @comment do |f|
-  = f.input :body, as: :text
+  = f.input :body, as: :text, input_html: {rows: 10}, hint: t('hints.can_markdown')
   = f.button :submit, t('buttons.submit')
   | &nbsp;
   = render 'shared/btn-remove', url:comment_path(@comment)

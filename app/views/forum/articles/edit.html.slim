@@ -5,7 +5,7 @@ hr
   = f.input :title
   = f.input :summary, as: :text
   = f.association :tags, as: :check_boxes, include_blank: false
-  = f.input :body, as: :text
+  = f.input :body, as: :text, input_html: {rows: 10}, hint: t('hints.can_markdown')
   = f.button :submit, t('buttons.submit')
   | &nbsp;
   = render 'shared/btn-remove', url:article_path(@article)
