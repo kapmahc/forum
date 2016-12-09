@@ -34,7 +34,6 @@ module Forum
     def create
       @article = Article.new article_params
       authorize @article
-      puts '###'*80, @article.inspect
 
       @article.lang = I18n.locale
       @article.user = current_user
